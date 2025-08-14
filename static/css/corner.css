@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: url("c:/Users/ADMIN/Downloads/Tlou pt 2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main {
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+}
+
+.logo{
+    font-size: 50px;
+    font-family: 'Times New Roman';
+    padding-left: 10px;
+    padding-bottom: 30px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  gap: 40px;
+}
+
+.phone {
+  width: 230px;               /* Phone width */
+  height: 420px;              /* Phone height */
+  background-color: black;    /* Phone body color */
+  border-radius: 40px;        /* Rounded edges */
+  padding: 20px;              /* Space for phone bezels */
+  box-shadow: 0 103px 25px rgba(0, 0, 0, 0.4); /* Shadow */
+  position: relative;
+  margin-left: 80px;
+  margin-right: 200px; /* Center phone */
+}
+
+.screen {
+  background-color: white;    /* Screen background */
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;           /* Clip image inside */
+}
+
+.screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* Make image fill screen */
+}
+
+
+.writeup {
+    width: 900px;
+    height: 400px;
+    padding-top: 200px;
+    font-family: sans-serif;
+    text-align: center;
+    color: rgb(73, 67, 73);
+    background: rgb(153, 119, 148);
+    font-size: 22px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-left: none;
+    margin: 0;
+    padding: 0;
+}
+
+.latest .btn {
+    width: 160px;
+    height: 40px;
+    background: rgb(211, 130, 102);
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 300px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.latest .btn a {
+    text-decoration: none;
+    color: antiquewhite;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: rgb(138, 95, 81);
+}
