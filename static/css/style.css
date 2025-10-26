@@ -3,133 +3,101 @@
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
+    padding: 0;
+    margin: 0;
     width: 100%;
-    height: 100vh;
-    background: red; /* Temporary background color for visibility */
+    min-width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #493e3e 100%);
     background-repeat: no-repeat;            
     background-position: center;  
-    background-size: cover;           
-}
-
-.main{
-    width: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-
-.navbar{
-    width: 1200px;
-    height: 75px;
-    margin: auto;
+    background-size: cover;  
+    overflow-x: hidden; /* prevent sideways scrolling */  
 }
 
 .icon{
-    width: 200px;
-    float: left;
-    height: 70px;
+    display: flex;              /* make logo + menu side by side */
+    align-items: center;        /* vertical alignment */
+    gap: 100px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-bottom: 1px solid white;  /* line underneath */
 }
 
 .logo{
-    color: rgb(211, 130, 102);
+    color: white;
     white-space: nowrap;
-    font-size: 35px;
-    font-family: 'Times New Roman';
-    padding-left: 10px;
-    padding-top: 15px;
-}
-
-.menu{
-    width: 400px;
-    float: left;
-    height: 70px;
+    font-size: 50px;
+    font-family: 'Arial black';
+    font-style: italic;
+    cursor: pointer;
 }
 
 ul{
-    float: left;
     display: flex;
-    justify-content: center;
+    flex-direction: row;
     align-items: center;
-    padding-bottom: 30px;
 }
 
 ul li{
     white-space: nowrap;
     list-style: none;
-    margin-left: 100px;
-    margin-top: 27px;
+    margin: 15px 0px 0px 100px;
     font-size: 20px;
 }
 
 ul li a{
     text-decoration: none;
     color: white;
-    font-family: 'Times New Roman';
+    font-family: 'georgia';
     font-weight: bold;
 }
 
 ul li a:hover{
-    color: rgb(211, 130, 102);
+    color: rgb(207, 207, 204);
 }
 
 .content{
     display: flex;
     flex-direction: column;
-    width: 1200px;
+    align-items: flex-start;
+    width: 100%;
+    min-width: 100vw;
     height: auto;
-    margin: auto;
+    margin-left: 50px;
     color: white;
-    position: relative;
+    cursor: pointer;
 }
 
 .content .par{
-    padding-left: 20px;
     padding-bottom: 25px;
     font-family: Arial;
-    letter-spacing: 1.2px;
+    letter-spacing: 1px;
     line-height: 30px;
 }
 
 .content h1{
     font-family: 'Times New Roman';
     font-size: 50px;
-    padding-left: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 1.2px;
     margin-bottom: 20px;
     margin-top: 100px;
-}
-
-.content .cn{
-    width: 160px;
-    height: 40px;
-    background: rgb(211, 130, 102);
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 20px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s ease;
-}
-
-.content .cn a{
-    text-decoration: none;
-    color: white;
-    transition: .3s ease;
-}
-
-.cn:hover{
-    background-color: palevioletred;
+    right: 600px;
 }
 
 .form{
     width: 250px;
-    height: 275px;
+    height: 200px;
     background: linear-gradient(to top, rgb(0, 0, 0, 0.5)50%, rgb(0, 0, 0, 0.5)50%);
     position: absolute;
-    top: -20px;
-    left: 870px;
+    left: 900px;
     margin-top: 80px;
     border-radius: 15px;
     padding: 30px;
@@ -140,9 +108,9 @@ ul li a:hover{
     width: 220px;
     font-family: sans-serif;
     text-align: center;
-    color: rgb(211, 130, 102);
-    font-size: 22px;
-    background: antiquewhite;
+    color: rgb(49, 49, 49);
+    font-size: 18px;
+    background-color: white;
     border-radius: 10px;
     margin: 2px;
     padding: 8px;
@@ -152,12 +120,12 @@ ul li a:hover{
     width: 240px;
     height: 35px;
     background: transparent;
-    border-bottom: 1px solid rgb(211, 130, 102);
+    border-bottom: 1px solid white;
     border-top: none;
     border-right: none;
     border-left: none;
     margin-top: 30px;
-    color: antiquewhite;
+    color: white;
     letter-spacing: 1px;
     font-family: sans-serif;
 }
@@ -167,39 +135,52 @@ ul li a:hover{
 }
 
 ::placeholder{
-    color: antiquewhite;
+    color: white;
     font-family: Arial;
 }
 
-.form .btn{
-    width: 160px;
-    height: 40px;
-    background: rgb(211, 130, 102);
-    border: none;
+.form button{
+    display: inline-block;       /* makes it look like a button */
+    padding: 10px 20px;          /* spacing inside */
     margin-top: 40px;
-    margin-bottom: 10px;
-    margin-left: 40px;
-    font-size: 18px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s ease;
+    margin-left: 60px;
+    background-color: rgb(49, 49, 49);   /* primary color */
+    color: white;                /* text color */
+    text-decoration: none;       /* remove underline */
+    border-radius: 5px;          /* rounded corners */
+    font-weight: bold;           /* bold text */
+    transition: background 0.3s; /* smooth hover effect */
 }
 
-.form .btn a{
+.form button a{
     text-decoration: none;
-    color: antiquewhite;
+    color: white;
     font-weight: bold;
     transition: .3s ease;
 }
 
-.btn:hover{
-    background-color: palevioletred;
+.button:hover{
+    background-color: black;
 }
 
-.form .cwm{
-    padding-left: 60px;
-    padding-bottom: 25px;
-    padding-top: 30px;
-    font-family: Arial;
-    line-height: 20px;
+.btn-primary{
+  display: inline-block;       /* makes it look like a button */
+  padding: 10px 20px;          /* spacing inside */
+  background-color: white;   /* primary color */
+  color: rgb(49, 49, 49);                /* text color */
+  text-decoration: none;       /* remove underline */
+  margin-top: 20px;
+  margin-left: 50px;
+  border-radius: 5px;          /* rounded corners */
+  font-weight: bold;           /* bold text */
+  transition: background 0.3s; /* smooth hover effect */
+}
+
+.footer-text{
+    margin-top: 80px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
 }

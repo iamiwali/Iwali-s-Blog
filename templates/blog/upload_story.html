@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Story</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/upload_story.css' %}">
+</head>
+<body>
+    <h1>Upload a New Story</h1>
+    <form method="post" class="my-form">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    <div class="story-sections">
+      <a href="{% url 'story_list' %}">Story List</a>
+    </div>
+
+    <div class="Home">
+        <a href="{% url 'home' %}">Home</a>
+    </div>
+
+</body>
+</html>
+

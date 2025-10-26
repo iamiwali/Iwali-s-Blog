@@ -1,0 +1,9 @@
+
+        {% for story in fiction_stories %}
+          <li>
+            {{ story.title }}
+            {% if story.id %}
+              <a href="{% url 'delete_story' story.id %}" style="color: red;">Delete</a>
+            {% endif %}
+          </li>
+            {% endfor %}

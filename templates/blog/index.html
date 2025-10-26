@@ -1,49 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Iwali's Website</title>
         {% load static %}
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
     </head>
     <body>
-    <main>
-            <div class="navbar">
-                <div class="icon">
-                    <h2 class="logo">Iwali Writes</h2>
-                </div>
+        <div class="icon">
+            <h2 class="logo">Iwali's Blog</h2>
                
-                <div class="menu">
-                    <ul>
-                        <li><a href="MyCorner.html">MY CORNER</a></li>
-                        <li><a href="fiction.html">FICTION</a></li>
-                        <li><a href="truecrime.html">TRUE CRIME</a></li>
-    
-                    </ul>
-                </div>
+            <div class="menu">
+               <ul>
+                   <li><a href="{% url 'fiction' %}">Fiction</a></li>
+                   <li><a href="{% url 'truecrime' %}">True Crime</a></li>
+                   <li><a href="{% url 'my_corner' %}">My Corner</a></li>
+               </ul>
+            </div>  
+        </div>
 
-                <div class="content">
-                    <h1>Exploring the crimes we fear <br>and the stories we crave.</h1>
-                    <p class="par">Chilling true crime stories that expose the darkest sides of human nature and <br>
-                        <span>crafted tales that invite you to explore lives, emotions, and the many layers of identity.</span>
-                        <br>Welcome to the blurred edge of truth and imagination.
-                    </p>
-
-                    <div class="form">
-                        <h2>Subscribe Here</h2>
-                        <input type="email" name="email" placeholder="Enter Email Here">
-                        <button class="btn"><a href="#">Subscribe</a></button>
-
-                        <p class="cwm">Connect With Me</p>
-
-                        <div class="icon">
-                            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                        </div>
-                    </div>
-                </div>
-                <footer>
-                   <p class="footer-text">&copy; 2023 True Crime. All rights reserved.</p>
-                </footer>
-
+        <div class="content">
+            <div class="intro">
+               <h1>Exploring the crimes we fear <br>and the stories we crave.</h1>
+               <p class="par">Chilling true crime stories that expose the darkest sides of human nature and <br>
+                 <span>crafted tales that invite you to explore lives, emotions, and the many layers of identity.</span>
+                 <br>Welcome to the blurred edge of truth and imagination.
+               </p>
             </div>
+             <div class="form">
+                <h2>Subscribe for Updates</h2>
+                <form method="post">
+                  {% csrf_token %}
+                  {{ form.email }}
+                  <button type="submit">Subscribe</button>
+                </form>  
+            </div>
+        </div>
+            <footer>
+                <p class="footer-text">&copy; 2025 True Crime. All rights reserved.</p>
+            </footer>
     </body>
 </html>

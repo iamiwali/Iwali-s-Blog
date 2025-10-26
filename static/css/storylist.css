@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #493e3e 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    overflow: hidden;
+}
+
+h1 {
+  font-size: 3em;
+  font-family: Georgia;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 20px 30px 0px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  border-bottom: 1px solid white;  /* line underneath */
+  width: 40%;
+  position: relative;
+  left: 400px;
+}
+
+h2{
+  margin: 15px ;
+  color: white;
+  font-family: 'Arial', sans-serif;
+}
+
+.container {
+  display: flex;              /* place children side by side */
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;                  /* spacing between the two sections */
+  margin: 20px auto;
+  max-width: 1000px;
+  color: white;
+  font: 1em sans-serif;
+  width: 100%;
+}
+
+/* Left column */
+.fiction {
+  flex: 1;
+  padding-right: 20px;
+  border-right: 2px solid #ccc; /* vertical line divider */
+}
+
+/* Right column */
+.truecrime {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.story-item {
+  display: flex;
+  justify-content: space-between; /* title on left, button on right */
+  align-items: center;
+  padding: 15px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 25px;
+  background: #f9f9f9;
+}
+
+/* Title style */
+.story-title {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Button style */
+.delete-btn {
+  color: white;
+  background: red;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background: darkred;
+}
+
+.Back{
+  top: 50px;
+  left: 50px;
+  position: fixed;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.Back a {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 550;
+  color: black;
+}
+
+.Back:hover {
+  background-color: #aca3a3;
+}

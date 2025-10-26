@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>True Crime</title>
-        <link rel="stylesheet" href="truecrime.css">   
+        {% load static %}   
+        <link rel="stylesheet" href="{% static 'css/truecrime.css' %}">   
     </head>
     <body>
         <header>
             <h1>True Crime</h1>
             <p class="tagline">Gripping real life horror stories.</p>
+            {% for story in stories %}
+            <div class="story card">
+               <a href="{% url 'story_detail' story.pk %}">
+                  <h2>{{ story.title }}</h2>
+                  <p>{{ story.content|truncatewords:20 }}</p>
+               </a>
+            </div> 
+            {% empty %}
+               <p>No true crime stories yet.</p>
+            {% endfor %}
               <div class="flower-container">
                 <svg class="flower1" width="80mm" height="80mm" version="1.1" viewBox="30 28 300 297" xmlns="http://www.w3.org/2000/svg">
  <path d="m118.97 250.8c-3.937-4.9096-9.9289-8.336-22.576-6.957 3.1311-1.6078 6.2282-3.2662 7.9095-7.0506-4.7364 1.7724-22.229 1.0732-31.194 6.8368 3.9457-2.6237 4.9133-5.7344 5.7563-8.8659-3.8232 3.8391-34.877 8.111-49.138 29.824 23.848-17.564 49.763-15.979 59.652-15.681-7.2633 2.4548-14.876 5.0888-22.534 6.4965-14.281 2.6249-28.123 2.2339-37.182 9.2933 15.434-9.2546 28.577 3.1045 46.397 1.0231-1.1532-2.8472-2.8248-3.9029-4.4175-5.2319 5.4722 0.80399 10.512 2.0022 15.31 2.148 4.4181 0.13429 7.9849-1.7797 13.217-0.21248-1.3839-2.4946-2.9326-4.8114-5.5371-5.9905 8.2258-0.88999 14.873-6.1957 24.339-5.6326z"/>
@@ -78,15 +91,11 @@
         </header>
         <main>
             <section>
-                <button class="back-button" onclick="window.location.href='index.html'">Back to Home</button>
-                <ul class="button-list">
-                    <li><a href="story1.html">The Curse...</a></li>
-                    <li><a href="story2.html">The Watercooler...</a></li>
-                </ul>
+                <div class="back-button"><a href="{% url 'home' %}">Back to Home</a></div>
             </section>
         </main>
         <footer>
-            <p class="footer-text">&copy; 2023 True Crime. All rights reserved.</p>
+            <p class="footer-text">&copy; 2025 True Crime. All rights reserved.</p>
         </footer>
     </body>
 </html>

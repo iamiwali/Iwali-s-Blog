@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #493e3e 100%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;  /* keeps it stuck to viewport */
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Cambria', 'Cochin';
+  font-weight: bold;
+}
+
+/* Style the heading */
+h1 {
+  color: white;
+  white-space: nowrap;
+  font-size: 50px;
+  font-family: 'Georgia';
+  font-weight: bold;
+  cursor: pointer;
+  padding: 30px 0px 0px 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid white;  /* line underneath */
+  position: relative;
+  left: 400px;
+  width: 40%;
+}
+
+
+
+/* General form container */
+.my-form {
+  max-width: 800px;
+  max-height: fit-content;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+  left: 250px;
+  top: 80px;
+}
+
+/* Style all inputs and textareas */
+.my-form input,
+.my-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  background: linear-gradient(135deg, #000000 0%, #493e3e 100%);
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.my-form input[type="text"],
+.my-form textarea {
+  color: white;
+  font-size: 20px;
+  font-weight: 100;
+  font-family: 'Haettenschweiler';
+}
+
+.my-form input::placeholder,
+.my-form textarea::placeholder {
+  color: white;
+  opacity: 0.7; /* Slightly transparent */
+}
+
+/* Focus effect */
+.my-form input:focus,
+.my-form textarea:focus {
+  outline: none;
+}
+
+/* Label styling */
+.my-form label {
+  font-weight: bold;
+  font-size: 15px;
+  color: white;
+}
+
+/* Specific: Title field */
+#id_title {
+  width: 50%;/* half width */
+}
+
+#id_content {
+  width: 100%; /* full width */
+  min-height: 800px;
+}
+
+/* Submit button */
+.my-form button {
+  background: #3d3f3d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+  left: 350px;
+}
+
+.my-form button:hover {
+  background: #252525;
+  transform: translateY(-2px);
+}
+
+.Home{
+  top: 40px;
+  left: 70px;
+  position: fixed;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.Home a{
+  text-decoration: none;
+  color: rgb(66, 65, 65);
+}
+
+.Home:hover{
+  box-shadow: 5px 2px #000000; /* Deeper shadow on hover */
+  transform: translateY(-2px);
+}
+
+
+.story-sections{
+  position: fixed;   /* positioned relative to parent */
+  top: 40px;         /* space from the top */
+  right: 70px;       /* space from the right */
+  z-index: 10;       /* makes sure it’s above content if overlapping */
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.story-sections a{
+  text-decoration: none;
+  color:  rgb(66, 65, 65);
+}
+
+.story-sections:hover{
+    box-shadow: 5px 2px #000000; /* Deeper shadow on hover */
+    transform: translateY(-2px);
+}

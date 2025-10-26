@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(66, 65, 65);
+    font-size: 1.2em;
+    font-family: 'Cambria', 'Cochin';
+    font-weight: bold;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-width: 100vw;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #493e3e 100%);
+    background-repeat: no-repeat;            
+    background-position: center;  
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+header {
+    text-align: center;
+    color: white;
+    padding-bottom: 30px;
+}
+
+h1 {
+    width: 500px;
+    font-size: 3em;
+    font-family: Georgia;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    left: 420px; /* Adjusted for layout */
+    border-bottom: 1px solid white;  /* line underneath */
+}
+
+.content {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    font-family: 'Georgia', serif;
+    font-size: 1em;
+    line-height: 1.6;
+    color: white;
+}
+
+.flower1 {
+  position: absolute;   /* positioned relative to parent */
+  top: 10px;            /* space from the top */
+  left: 10px;          /* space from the right */
+  width: 200px;         /* adequate size */
+  height: auto;         /* keeps proportions */
+  z-index: 10;          /* makes sure it’s above content if overlapping */
+  display: block;
+  fill: white; /* changes inside color */
+  stroke:white; /* outline color */
+  transition: 0.3s ease;
+}
+
+.footer-text {
+    text-align: center;
+    color: white;
+    padding: 50px 0;
+}
+
+.Back{
+    position: fixed;   /* positioned relative to parent */
+    top: 40px;         /* space from the top */
+    right: 20px;       /* space from the right */
+    z-index: 10;       /* makes sure it’s above content if overlapping */
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.previous{
+    top: 550px;
+    right: 1200px;
+    position: fixed;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.previous:hover{
+    box-shadow: 5px 2px #000000; /* Deeper shadow on hover */
+    transform: translateY(-2px);
+}
+
+.next{
+    top: 550px;
+    left: 1200px;
+    position: fixed;
+    background-color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.next a{
+    text-decoration: none;
+    color: black;
+}
+
+.next:hover{
+    box-shadow: 5px 2px #000000; /* Deeper shadow on hover */
+    transform: translateY(-2px);
+}

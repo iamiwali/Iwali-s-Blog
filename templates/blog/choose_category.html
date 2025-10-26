@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Choose Category</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/choose_category.css' %}">
+</head>
+<body>
+    <h1>Choose Category for "{{ story.title }}"</h1>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="category" value="fiction">New Page in Fiction</button>
+        <button type="submit" name="category" value="true_crime">New Page in True Crime</button>
+    </form>
+</body>
+</html>
+
+
+
+    
+    

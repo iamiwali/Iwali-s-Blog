@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Categories</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/category_list.css' %}">
+    </head>
+    <body>
+        <header>
+            <h1>{{ category|title }} Stories</h1>
+        </header>
+        <main>
+            <ul>
+               {% if stories %}
+                  {% for story in stories %}
+                      <li>
+                          <h3>{{ story.title }}</h3>
+                          <p>{{ story.content|truncatewords:20 }}</p>
+                      </li>
+                  {% endfor %}
+               {% else %}
+                  <li><p>No stories in this category yet.</p></li>
+               {% endif %}
+            </ul>
+        </main>
+    </body>
+</html>
+
+
+
